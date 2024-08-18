@@ -12,7 +12,7 @@ interface GameMapCanvasProps {
   selectedSprite: { id: number; src: string } | null;
 }
 
-const TILE_SIZE = 1; // 타일의 크기
+const TILE_SIZE = 0.5; // 타일의 크기
 
 export const GameMapCanvas = ({ selectedSprite }: GameMapCanvasProps) => {
   const [tiles, setTiles] = useState<Tile[]>([]);
@@ -25,6 +25,7 @@ export const GameMapCanvas = ({ selectedSprite }: GameMapCanvasProps) => {
       '/public/icons/forest.png',
       '/public/icons/tile.png',
       '/public/icons/tree.png',
+      // 추가 텍스처 경로
     ];
 
     spriteSources.forEach((src) => {
