@@ -7,7 +7,6 @@ import { SpritesSection } from '@/components/sprites-section';
 
 export const GameMapContainer = () => {
     const [selectedSprite, setSelectedSprite] = useState<Sprite | null>(null);
-console.log('selectedSprite:',selectedSprite)
     const handleSpriteSelect = (sprite: Sprite) => {
         setSelectedSprite(sprite);
     };
