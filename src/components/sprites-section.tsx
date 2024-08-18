@@ -1,15 +1,18 @@
 import { Sprite } from '@/types/sprite'
 import styled from '@emotion/styled'
 import { useState } from 'react';
+import forestImg from '@/assets/images/forest.png';
+import tileImg from '@/assets/images/tile.png';
+import treeImg from '@/assets/images/tree.png';
 
 interface SpritesProps {
     onSelect: (sprite:Sprite)=> void
 }
 
 const DEFAULT_SPRITE: Sprite[] = [
-    { id: 1, src: '/public/icons/forest.png' },
-    { id: 2, src: '/public/icons/tile.png' },
-    { id: 3, src: '/public/icons/tree.png' }
+    { id: 1, src: forestImg },
+    { id: 2, src: tileImg },
+    { id: 3, src: treeImg }
 ];
 
 

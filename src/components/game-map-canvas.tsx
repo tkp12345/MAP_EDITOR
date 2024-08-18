@@ -2,6 +2,9 @@ import { useTextures } from '@/hooks/use-textures'
 import { useTiles } from '@/hooks/use-tiles'
 import { Canvas } from '@react-three/fiber'
 import { useState } from 'react'
+import forestImg from '@/assets/images/forest.png';
+import tileImg from '@/assets/images/tile.png';
+import treeImg from '@/assets/images/tree.png';
 
 interface GameMapCanvasProps {
   selectedSprite: { id: number; src: string } | null;
@@ -12,7 +15,7 @@ const SEGMENTS = 10;  // 캔버스 그리드의 세그먼트 수 (그리드의 �
 const TILE_SIZE = GRID_SIZE / SEGMENTS;
 
 export const GameMapCanvas = ({ selectedSprite }: GameMapCanvasProps) => {
-  const spriteSources = ['/public/icons/forest.png', '/public/icons/tile.png', '/public/icons/tree.png'];
+  const spriteSources = [forestImg, tileImg,treeImg];
   const texturesRef = useTextures(spriteSources);
   const { tiles, addTile } = useTiles();
   const [isDrawing, setIsDrawing] = useState(false);
