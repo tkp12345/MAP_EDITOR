@@ -15,8 +15,6 @@ const DEFAULT_SPRITE: Sprite[] = [
     { id: 3, src: treeImg }
 ];
 
-
-
 export const SpritesSection = ({onSelect}:SpritesProps) => {
     const [selected, setSelected] = useState<Sprite | null>(null);
 
